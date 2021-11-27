@@ -40,7 +40,7 @@ a {
     gap: 1em;
     position: fixed;
     flex-direction: column;
-    top: 100px;
+    top: -500px;
     right: 45%;
     cursor: pointer;
     transition: .5s ease;
@@ -49,7 +49,7 @@ a {
 /* Menu - Toggle */ 
 .menu.active {
     transition: .5s ease;
-    top: -2000px;
+    top: 200px;
 }
 
 /* Menu - Item */ 
@@ -76,12 +76,31 @@ a {
 }
 
 /* Hamburger - Burger */ 
-.bar {
+.bar0, .bar1, .bar2 {
     
-    width: 40px;
+    width: 41px;
     height: 5px;
     background: white;
     border-radius: 10px;
     transition: 0.3s ease;
+    opacity: 100%;
 }
+
+.logo.active .bar0 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 12px;
+    transition: 0.3s ease;
+}
+.logo.active .bar1 {
+    opacity: 0%;
+}
+
+.logo.active .bar2 {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -13px;
+    transition: 0.3s ease;
+}
+
 
