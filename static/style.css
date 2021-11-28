@@ -1,3 +1,5 @@
+@import "nord.css";
+
 /* Global */ 
 * {
     padding: 0px;
@@ -7,11 +9,11 @@
 
 
 body {
-    background-color: var(--snow_color3);
+    background-color: var(--nord6);
 }
 /* Header */ 
 header {
-    background-color: #a1a1a1;
+    background-color: var(--nord4);
 }
 
 /* List */ 
@@ -22,7 +24,7 @@ li {
 /* Text */ 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--nord0);
 }
 
 /* Nav Bar */ 
@@ -46,7 +48,7 @@ a {
     position: fixed;
     flex-direction: column;
     top: -500px;
-    right: 45%;
+    right: 50%;
     cursor: pointer;
     transition: .5s ease;
     z-index: -1;
@@ -65,7 +67,8 @@ a {
 
 /* Menu - Item - Link */ 
 .link:hover {
-    color: brown;
+    color: var(--nord8);
+    transition: .25s ease;
 }
 
 /* Hamburger */ 
@@ -81,31 +84,34 @@ a {
     padding: 5px 0 5px 0;
 }
 
-/* Hamburger - Burger */ 
+/* Hamburger - Burgers */ 
 .bar0, .bar1, .bar2 {
-    
     width: 41px;
     height: 5px;
-    background: white;
+    background: var(--nord6);
     border-radius: 10px;
     transition: 0.3s ease;
     opacity: 100%;
 }
 
+/* Hamburger - Burger 0 - Animation */ 
 .logo.active .bar0 {
     transform: rotate(45deg);
     position: relative;
     top: 12px;
     transition: 0.3s ease;
 }
+
+/* Hamburger - Burger 1 - Animation */ 
 .logo.active .bar1 {
     opacity: 0%;
 }
 
+/* Hamburger - Burger 2 - Animation */ 
 .logo.active .bar2 {
     transform: rotate(-45deg);
     position: relative;
-    top: -13px;
+    top: -12px;
     transition: 0.3s ease;
 }
 
